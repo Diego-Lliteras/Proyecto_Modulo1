@@ -1,15 +1,15 @@
 from matplotlib import pyplot as plt
 
 def principal_series(datos):
-    estadoTXT = input('Lugar -> ').upper()
-    print(estadoTXT)
-    if estadoTXT in regresa_estados(datos):
-        fechas, contagios = regresa_meses_casos(datos, estadoTXT)
-        print(fechas)
-        print(contagios)
-        grafica_linea(fechas, contagios, estadoTXT)
-    else:
-        print("Lugar inválido")
+    salir = False
+    while salir != True:
+        estadoTXT = input('Lugar -> ').upper()
+        if estadoTXT in regresa_estados(datos):
+            fechas, contagios = regresa_meses_casos(datos, estadoTXT)
+            grafica_linea(fechas, contagios, estadoTXT)
+            salir = True
+        else:
+            print("Lugar inválido")
 
 #Regresamos lista de estados
 def regresa_estados(matriz):
