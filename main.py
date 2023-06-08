@@ -1,5 +1,6 @@
 import os
 import dia_mas_casos
+import series_de_tiempo
 
 def imprimir_menu():
     print('*'*60)
@@ -31,12 +32,11 @@ def main():
         imprimir_menu()
         opt = int(input('Opción--> '))
         if opt == 1:
-            print('Opción 1')
             dia_mas_casos.tabla_dias_mas_contagios(datos)
         elif opt == 2:
             print('Aqui va lo tuyo shaddi!')
         elif opt == 3:
-            print('Opción 3')
+            series_de_tiempo.principal_series(datos)
         elif opt == 4:
             break
         else:

@@ -44,11 +44,11 @@ def muestra_tabla(datos, column_labels):
 def grafica_linea(x, y):
     fig, ax = plt.subplots(figsize=(15,10))
     ax.plot(x,y) # Gráfica de línea
-    plt.xticks(x,rotation=45)
+    plt.xticks(x,rotation=90)
     plt.margins(0.1)
     plt.subplots_adjust(bottom=0.4)
     plt.grid(True)
     plt.title("Día con más casos por estado")
-    ax.set_xlabel("Eje X")
-    ax.set_ylabel("Eje Y")
+    ax.set_xlabel("Contagios")
+    ax.set_ylabel("Estados")
     plt.show()
