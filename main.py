@@ -1,5 +1,6 @@
 import os
 import dia_mas_casos
+import porcentajes_estado
 import series_de_tiempo
 
 def imprimir_menu():
@@ -34,7 +35,7 @@ def main():
         if opt == 1:
             dia_mas_casos.tabla_dias_mas_contagios(datos)
         elif opt == 2:
-            print('Aqui va lo tuyo shaddi!')
+            porcentajes_estado.principal_porcentajes(datos)
         elif opt == 3:
             series_de_tiempo.principal_series(datos)
         elif opt == 4:
